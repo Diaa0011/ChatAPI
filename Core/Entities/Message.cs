@@ -4,8 +4,8 @@ namespace ChatApp.Entities;
 
 public class Message
 {
-    public Ulid Id { get; set; }
-    public Ulid OriginalMessageId { get; set; }
+    public Guid Id { get; set; }
+    public Guid OriginalMessageId { get; set; }
     public string Content { get; set; }
     public MessageType Type { get; set; }
     public bool IsRead { get; set; }
