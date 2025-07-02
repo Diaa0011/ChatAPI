@@ -6,5 +6,4 @@ public class ReadMessage
     public Guid MessageId { get; set; }
     public Guid ReaderId { get; set; }
     public DateTime ReadOn { get; set; }
-    
 }

@@ -15,5 +15,5 @@ public class Message
     public DateTime? UpdatedOn { get; set; }
     public string? UpdaterId { get; set; }
     public DateTime? DeletedOn { get; set; }
-    public string? DeleterId { get; set; }    
+    public string? DeleterId { get; set; }
 }

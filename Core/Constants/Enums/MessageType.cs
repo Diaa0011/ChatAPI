@@ -2,5 +2,6 @@
 
 public enum MessageType
 {
-    New,Reply
+    New,
+    Reply
 }
