@@ -1,4 +1,5 @@
 ﻿using ChatApp.Data;
+using ChatApp.Hubs;
 using Microsoft.EntityFrameworkCore;
 
 namespace ChatApp.Extensions;
@@ -12,6 +13,7 @@ public static class HostingExtensions
             options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
         // Add Services
         services.AddSingleton<ChatService>();
+        services.AddSignalR();
 
         // Add Controllers
         services.AddControllers(); 
@@ -38,6 +40,8 @@ public static class HostingExtensions
 
         app.MapControllers();
         app.UseWebSockets();
+
+        app.MapHub<ChatHub>("/chatHub");
 
 
         return app;

@@ -5,7 +5,8 @@ namespace ChatApp.Entities;
 public class Message
 {
     public Guid Id { get; set; }
-    public Guid OriginalMessageId { get; set; }
+    public Guid? ChatRoomId { get; set; }
+    public Guid? OriginalMessageId { get; set; }
     public string Content { get; set; }
     public MessageType Type { get; set; }
     public bool IsRead { get; set; }
